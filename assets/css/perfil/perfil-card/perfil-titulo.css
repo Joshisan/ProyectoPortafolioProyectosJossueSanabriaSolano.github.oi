@@ -1,0 +1,33 @@
+.perfil_container__titulo {
+    width: 100%;
+    color: var(--ColorFuente_blanco);
+    text-align: left;
+    padding-bottom: 2rem;
+    font-size: 1.5rem;
+    font-family: var(--Raleway);
+}
+
+.perfil_container__titulo h2 {
+    font-weight: bold;
+    padding-bottom: 1rem;
+}
+
+@media screen and (max-width:768px){ 
+    .perfil_container__titulo {
+        text-align: center;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:1023px) { 
+    .perfil_container__titulo {
+        width: 70%;
+        color: var(--ColorFuente_blanco);
+        text-align: center;
+        padding-left: 15%;
+        padding-right: 15%;
+        padding-top: 0.7rem;
+        padding-bottom: 2rem;
+        font-size: 1.5rem;
+        font-family: var(--Raleway);
+    }
+}

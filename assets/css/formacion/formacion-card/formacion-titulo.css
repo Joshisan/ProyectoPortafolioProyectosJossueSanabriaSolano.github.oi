@@ -1,0 +1,13 @@
+.formato_texto__titulacion {
+    font-family: var(--RobotoSlab);
+    font-size: 1.75rem;
+    color: var(--ColorFuente_blanco);
+    padding-bottom: 0.25rem;
+}
+
+@media screen and (min-width:375px) and (max-width:768px) { 
+    .formato_texto__titulacion {
+        font-size: 1.25rem;
+        padding-bottom: 0.5rem;
+    }
+}

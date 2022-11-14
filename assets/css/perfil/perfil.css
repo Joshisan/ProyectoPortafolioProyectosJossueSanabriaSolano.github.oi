@@ -1,0 +1,32 @@
+.perfil_container {
+    width: 100%;
+    height: auto;
+    background: var(--fondo_perfil);
+    padding-bottom: 5%;
+}
+
+.perfil_container__imagen___texto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 8%;
+}
+
+@media screen and (max-width:768px){
+    .perfil_container__imagen___texto {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-top: 8%;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:1023px) { 
+    .perfil_container__imagen___texto {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-top: 8%;
+    }
+}

@@ -1,0 +1,128 @@
+.footer_container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto_titulo {
+    width: 50%;
+    font-family: var(--Raleway);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--ColorFuente_negro);
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-top: 3rem;
+}
+
+.contacto_titulo h2 {
+    padding-bottom: 1rem;
+}
+
+.footer_container__logos___redes {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+.footer_container__logos___redes ul {
+    width: 60%;
+    padding-left: 20%;
+    padding-right: 20%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+
+.footer_container__logos___redes ul img{
+    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer_redes__sociales {
+    display: flex;
+    justify-content: center;
+}
+
+.footer_container__logos___redes li {
+    width: 15%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer_container__menu___navegacion {
+    padding-bottom: 2rem;
+}
+
+.footer_container__menu___navegacion ul {
+    width: 50%;
+    padding-left: 25%;
+    padding-right: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.footer_container__menu___navegacion li {
+    font-family: var(--Raleway);
+    font-size: 1.3rem;
+
+}
+
+.footer_container__menu___navegacion li:hover {
+    font-family: var(--Raleway);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: underline;
+    color: var(--ColorFuente_footer);
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-image: var(--ColorFuente_hover);
+}
+
+.footer_container_leyenda_copyrights {
+    width: 100%;
+    font-family: var(--Raleway);
+    font-size: 1rem;
+    text-align: center;
+    color: var(--ColorFuente_negro);
+    padding-bottom: 5rem;
+}
+
+@media screen and (max-width:768px) {
+    .footer_container__menu___navegacion ul {
+        width: 80%;
+        padding-left: 10%;
+        padding-right: 10%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .footer_container_leyenda_copyrights {
+        width: 80%;
+        padding-left: 10%;
+        padding-right: 10%;
+        font-size: 0.75rem;
+    }   
+}
+
+@media screen and (min-width:769px) and (max-width:1023px){
+    .footer_container__menu___navegacion ul {
+        width: 80%;
+        padding-left: 10%;
+        padding-right: 10%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .footer_container_leyenda_copyrights {
+        width: 80%;
+        padding-left: 10%;
+        padding-right: 10%;
+        font-size: 0.75rem;
+    }   
+}

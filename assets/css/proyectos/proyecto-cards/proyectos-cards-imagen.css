@@ -1,0 +1,17 @@
+.proyectos_container__cards___imagen {
+    width: 80%;
+    display: inline-flex;
+    justify-content: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.proyectos_container__cards___imagen img {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 20%;
+}

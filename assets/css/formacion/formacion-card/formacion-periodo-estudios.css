@@ -1,0 +1,13 @@
+.formato_texto__periodo___estudio {
+    font-family: var(--RobotoSlab);
+    font-size: 1rem;
+    color: var(--ColorFuente_blanco);
+    padding-bottom: 0.25rem;
+}
+
+@media screen and (min-width:375px) and (max-width:768px) { 
+    .formato_texto__periodo___estudio {
+        font-size: 0.65rem;
+        padding-bottom: 0.5rem;
+    }
+}

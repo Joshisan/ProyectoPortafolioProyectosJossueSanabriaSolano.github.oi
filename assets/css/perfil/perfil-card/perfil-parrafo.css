@@ -1,0 +1,25 @@
+.perfil__parrafo {
+    width: 100%;
+    color: var(--ColorFuente_blanco);
+    font-family: var(--Raleway);
+    font-size: 1.05rem;
+    text-align: justify;
+    left: 0;
+    padding-right: 5%;
+}
+
+@media screen and (max-width:768px){ 
+    .perfil__parrafo {
+        width: 80%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+@media screen and (min-width:769px) and (max-width:1023px) { 
+    .perfil__parrafo {
+        width: 80%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}

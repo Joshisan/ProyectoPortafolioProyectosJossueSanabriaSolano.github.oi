@@ -1,0 +1,12 @@
+.proyectos_container__cards___subtitulo {
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+.proyectos_container__cards___subtitulo h2 {
+    font-family: var(--Raleway);
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+}

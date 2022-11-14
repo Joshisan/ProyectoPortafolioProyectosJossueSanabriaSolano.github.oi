@@ -1,0 +1,11 @@
+.proyectos_container__cards___parrafo {
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.proyectos_container__cards___parrafo p {
+    text-align: justify;
+}
