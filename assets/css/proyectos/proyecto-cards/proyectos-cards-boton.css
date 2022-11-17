@@ -8,7 +8,7 @@
     padding-bottom: 10%;
 }
 
-.proyectos_container__cards___boton p {
+.proyectos_container__cards___boton a {
     font-family: var(--Raleway);
     font-size: 1rem;
     text-align: center;
@@ -21,7 +21,7 @@
     padding-bottom: 0.5rem;
 }
 
-.proyectos_container__cards___boton p:hover {
+.proyectos_container__cards___boton a:hover {
     font-family: var(--Raleway);
     font-size: 1rem;
     text-align: center;
