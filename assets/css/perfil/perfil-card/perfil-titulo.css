@@ -13,6 +13,7 @@
 }
 
 .logos_skills h3 {
+    font-family: var(--Raleway);
     font-size: 1.25rem;
     font-weight: bold;
     padding-bottom: 2rem;
