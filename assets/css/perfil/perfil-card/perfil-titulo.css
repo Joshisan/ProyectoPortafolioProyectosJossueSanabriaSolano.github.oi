@@ -12,6 +12,27 @@
     padding-bottom: 1rem;
 }
 
+.logos_skills h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding-bottom: 2rem;
+}
+
+.logos_skills ul{
+    display: flex;
+}
+
+.logos_skills li{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.logos_Skills__img {
+    width: 30%;
+    padding-top: 1rem;
+}
+
+
 @media screen and (max-width:768px){ 
     .perfil_container__titulo {
         text-align: center;
