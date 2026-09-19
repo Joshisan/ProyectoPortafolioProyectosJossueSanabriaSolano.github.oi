@@ -1,308 +1,767 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width initial-scale=1.0">
-        <meta charset="UTF-8">
-        <title>Portafolio de Proyectos - Jossue Sanabria Solano</title>
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Raleway:wght@200&family=Roboto+Slab&display=swap" rel="stylesheet">
-        <link href="assets/css/formato-fuentes-fondos.css" rel="stylesheet">
-        <link href="assets/css/reset.css" rel="stylesheet">
-        <link href="assets/css/header.css" rel="stylesheet">
-        <link href="assets/css/main.css" rel="stylesheet">
-        <link href="assets/css/footer.css" rel="stylesheet">
-        <link href="assets/css/perfil/perfil.css" rel="stylesheet">
-        <link href="assets/css/perfil/perfil-card/perfil-imagen.css" rel="stylesheet">
-        <link href="assets/css/perfil/perfil-card/perfil-titulo.css" rel="stylesheet">
-        <link href="assets/css/perfil/perfil-card/perfil-parrafo.css" rel="stylesheet">
-        <link href="assets/css/proyectos/proyectos.css" rel="stylesheet">
-        <link href="assets/css/proyectos/proyectos-titulo.css" rel="stylesheet">
-        <link href="assets/css/proyectos/proyecto-cards/proyectos-cards-imagen.css" rel="stylesheet">
-        <link href="assets/css/proyectos/proyecto-cards/proyectos-cards-subtitulo.css" rel="stylesheet">
-        <link href="assets/css/proyectos/proyecto-cards/proyectos-cards-parrafo.css" rel="stylesheet">
-        <link href="assets/css/proyectos/proyecto-cards/proyectos-cards-boton.css" rel="stylesheet">
-        <link href="assets/css/formacion/formacion.css" rel="stylesheet">
-        <link href="assets/css/formacion/formacion-card/formacion-titulo.css" rel="stylesheet">
-        <link href="assets/css/formacion/formacion-card/formacion-institucion.css" rel="stylesheet">
-        <link href="assets/css/formacion/formacion-card/formacion-periodo-estudios.css" rel="stylesheet">
-        <link href="assets/css/formacion/formacion-card/formacion-ubicacion.css" rel="stylesheet">
-        <link href="" rel="stylesheet">
-    </head>
-    <body>
-        <header>
-            <section class="contenedor_elementos__header" id="enlace_inicio">
-                <div>
-                    <ul>
-                        <li class= "formato_texto_menu__navegacion_header"><a href="#enlace_inicio">Inicio</a></li>
-                        <li class= "formato_texto_menu__navegacion_header"><a href="#enlace_perfil">Perfil</a></li>
-                        <li class= "formato_texto_menu__navegacion_header"><a href="#enlace_proyectos">Proyectos</a></li>
-                        <li class= "formato_texto_menu__navegacion_header"><a href="#enlace_formacion">Formación</a></li>
-                        <li class= "formato_texto_menu__navegacion_header"><a href="#enlace_contacto">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="titulos__header">
-                    <div class="puesto__header">
-                        <h2>Digital Nomad Web Developer</h2>
-                    </div>
-                    <div class="desarrollador__header">
-                        <h2>Jossué Sanabria S.</h2>
-                    </div>
-                </div>
-                <section class="barra_divisora_encabezado"></section>
-                <div class="banner_header">
-                    <img class= "imagen_banner" src="img/Banner.png" alt="Banner">
-                </div>
-                <section class="barra_divisora_general"></section>
-            </section>
-        </header>
-        <main>
-            <div class="social">
+<html lang="es" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jossué Sanabria Solano · Software, datos y sistemas</title>
+    <meta name="description"
+        content="Portafolio de Jossué Sanabria Solano, estudiante de Ingeniería Informática en la UNED, con proyectos en C#, Java, Node.js y bases de datos.">
+    <meta name="theme-color" content="#10203f">
+    <meta property="og:title" content="Jossué Sanabria Solano · Portafolio">
+    <meta property="og:description" content="Proyectos, formación y contacto de Jossué Sanabria Solano.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_CR">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="preload" href="assets/fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script>
+        /* Aplica el tema guardado (o el del sistema) antes de pintar, para evitar parpadeos. */
+        (function () {
+            var root = document.documentElement;
+            var saved = null;
+            try { saved = localStorage.getItem("tema"); } catch (e) { }
+            var oscuro = saved ? saved === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+            root.setAttribute("data-theme", oscuro ? "dark" : "light");
+            root.classList.add("js");
+        })();
+    </script>
+</head>
+
+<body>
+
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+        <symbol id="i-github" viewBox="0 0 24 24">
+            <path fill="currentColor"
+                d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+        </symbol>
+        <symbol id="i-whatsapp" viewBox="0 0 24 24">
+            <path fill="currentColor"
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+        </symbol>
+        <symbol id="i-linkedin" viewBox="0 0 448 512">
+            <path fill="currentColor"
+                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
+        </symbol>
+        <symbol id="i-instagram" viewBox="0 0 24 24">
+            <path fill="currentColor"
+                d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077" />
+        </symbol>
+        <symbol id="i-facebook" viewBox="0 0 24 24">
+            <path fill="currentColor"
+                d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z" />
+        </symbol>
+        <symbol id="i-x" viewBox="0 0 24 24">
+            <path fill="currentColor"
+                d="M14.234 10.162 22.977 0h-2.072l-7.591 8.824L7.251 0H.258l9.168 13.343L.258 24H2.33l8.016-9.318L16.749 24h6.993zm-2.837 3.299-.929-1.329L3.076 1.56h3.182l5.965 8.532.929 1.329 7.754 11.09h-3.182z" />
+        </symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24">
+            <path fill="currentColor"
+                d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z" />
+        </symbol>
+        <symbol id="i-sun" viewBox="0 0 24 24">
+            <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <circle cx="12" cy="12" r="4" />
+                <path
+                    d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+            </g>
+        </symbol>
+        <symbol id="i-moon" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"
+                d="M20 14.5A8 8 0 0 1 9.5 4 8 8 0 1 0 20 14.5z" />
+        </symbol>
+    </svg>
+
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="site-header">
+        <div class="wrap">
+            <a class="brand" href="#inicio" aria-label="Ir al inicio">Jossué Sanabria</a>
+            <nav class="nav" aria-label="Principal">
                 <ul>
-                    <li><a href="https://github.com/joshisan" target="_blank" class="icon-github">GH</a></li>
-                    <li><a href="https://wa.me/+50685579715" target="_blank" class="icon-whatsapp">Wa</a></li>
-                    <li><a href="https://www.linkedin.com/in/jossuesanabrias/" target="_blank" class="icon-linkedin">In</a></li>
-                    <li><a href="https://www.facebook.com/Digital.Nomad.Web.Developers/" target="_blank" class="icon-facebook">Fb</a></li>
-                    <li><a href="https://www.instagram.com/digitalnomadwebdeveloper/" target="_blank" class="icon-instagram">Ig</a></li>
-                    <li><a href="https://twitter.com/NomadWebDevelop" target="_blank" class="icon-twitter">Tw</a></li>
+                    <li><a href="#perfil">Perfil</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#formacion">Formación</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+                <button class="theme-toggle" type="button" aria-label="Cambiar a tema oscuro">
+                    <svg class="icon icon-sun" aria-hidden="true">
+                        <use href="#i-sun" />
+                    </svg>
+                    <svg class="icon icon-moon" aria-hidden="true">
+                        <use href="#i-moon" />
+                    </svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main id="contenido">
+
+        <!-- ===== Inicio ===== -->
+        <section class="hero" id="inicio">
+            <div class="wrap">
+                <div class="hero-grid">
+                    <div>
+                        <h1><span>Jossué</span><span>Sanabria</span><span>Solano</span></h1>
+                        <p class="hero-lead">
+                            Construyo y mantengo software: sitios web, APIs, aplicaciones en
+                            <strong>C#, Java y Node.js</strong>, bases de datos y soporte de sistemas empresariales.
+                        </p>
+                        <div class="actions">
+                            <a class="btn" href="#proyectos">Ver proyectos</a>
+                            <a class="btn btn-outline" href="#contacto">Contactarme</a>
+                        </div>
+                    </div>
+                    <figure class="plate">
+                        <img src="img/foto-perfil.jpg" width="523" height="506" alt="Retrato de Jossué Sanabria">
+                    </figure>
+                </div>
+
+                <dl class="ficha">
+                    <div>
+                        <dt>Carrera</dt>
+                        <dd>Ingeniería Informática</dd>
+                    </div>
+                    <div>
+                        <dt>Universidad Estatal a Distancia</dt>
+                        <dd>UNED, Costa Rica</dd>
+                    </div>
+                    <div>
+                        <dt>Enfoque</dt>
+                        <dd>Software, datos y sistemas</dd>
+                    </div>
+                    <div>
+                        <dt>Ubicación</dt>
+                        <dd>San José, Costa Rica</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <!-- ===== Perfil ===== -->
+        <section class="section" id="perfil">
+            <div class="wrap">
+                <h2 class="section-title">Perfil</h2>
+                <div class="perfil-grid">
+                    <div class="prose">
+                        <p>
+                            Estudio Ingeniería Informática en la Universidad Estatal a Distancia de Costa Rica (UNED)
+                            desde 2021, y lo combino con
+                            mi trabajo en soporte de sistemas empresariales SAP Business One, lo que me permite llevar
+                            lo que aprendo en desarrollo
+                            y bases de datos a problemas reales de negocio.
+                        </p>
+                        <p>
+                            Gracias a la alianza entre Oracle y Alura Latam obtuve una beca del programa Oracle Next
+                            Education (ONE), donde me formé
+                            en desarrollo Full Stack con instructores con experiencia, y de ese programa salieron los
+                            proyectos web que verás más
+                            abajo.
+                        </p>
+                        <p>
+                            En la universidad amplié esa base con C# y ASP.NET, APIs RESTful, aplicaciones de
+                            escritorio, bases de datos y redes,
+                            además de investigación de operaciones y compiladores.
+                        </p>
+                    </div>
+
+                    <div class="skills">
+                        <h3>Tecnologías</h3>
+                        <dl>
+                            <div>
+                                <dt>Web</dt>
+                                <dd>
+                                    <ul class="chips">
+                                        <li>HTML5</li>
+                                        <li>CSS3</li>
+                                        <li>JavaScript</li>
+                                        <li>Bootstrap</li>
+                                    </ul>
+                                </dd>
+                            </div>
+                            <div>
+                                <dt>Aplicaciones y APIs</dt>
+                                <dd>
+                                    <ul class="chips">
+                                        <li>C#</li>
+                                        <li>ASP.NET Core</li>
+                                        <li>Windows Forms</li>
+                                        <li>Java</li>
+                                        <li>Node.js</li>
+                                        <li>Express</li>
+                                        <li>APIs REST</li>
+                                        <li>JWT</li>
+                                        <li>Entity Framework Core</li>
+                                    </ul>
+                                </dd>
+                            </div>
+                            <div>
+                                <dt>Datos</dt>
+                                <dd>
+                                    <ul class="chips">
+                                        <li>PostgreSQL</li>
+                                        <li>SQL Server</li>
+                                        <li>MySQL</li>
+                                    </ul>
+                                </dd>
+                            </div>
+                            <div>
+                                <dt>Sistemas empresariales</dt>
+                                <dd>
+                                    <ul class="chips">
+                                        <li>SAP Business One</li>
+                                        <li>Service Layer</li>
+                                        <li>Query Manager</li>
+                                        <li>Crystal Reports</li>
+                                        <li>N8N</li>
+                                    </ul>
+                                </dd>
+                            </div>
+                            <div>
+                                <dt>Conceptos</dt>
+                                <dd>
+                                    <ul class="chips">
+                                        <li>POO</li>
+                                        <li>Arquitectura en capas</li>
+                                        <li>Sockets TCP</li>
+                                        <li>Multihilo</li>
+                                    </ul>
+                                </dd>
+                            </div>
+                            <div>
+                                <dt>Despliegue y herramientas</dt>
+                                <dd>
+                                    <ul class="chips">
+                                        <li>Git</li>
+                                        <li>GitHub</li>
+                                        <li>GitHub Pages</li>
+                                        <li>Railway</li>
+                                        <li>Swagger</li>
+                                    </ul>
+                                </dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Proyectos ===== -->
+        <section class="section" id="proyectos">
+            <div class="wrap">
+                <h2 class="section-title">Proyectos</h2>
+
+                <div class="projects-featured">
+                    <article class="card card-featured">
+                        <div class="card-media"><svg class="diagram" viewBox="0 0 340 176" role="img"
+                                aria-label="Diagrama: el frontend en GitHub Pages consume una API REST en Railway, que usa PostgreSQL">
+                                <rect class="box" x="45" y="0" width="250" height="44" rx="4" /><text x="170" y="19"
+                                    text-anchor="middle" font-size="14" font-weight="700">Frontend</text><text x="170"
+                                    y="35" text-anchor="middle" font-size="11" opacity=".7">HTML, CSS y JavaScript ·
+                                    GitHub Pages</text>
+                                <rect class="box" x="45" y="66" width="250" height="44" rx="4" /><text x="170" y="85"
+                                    text-anchor="middle" font-size="14" font-weight="700">API REST</text><text x="170"
+                                    y="101" text-anchor="middle" font-size="11" opacity=".7">Node.js y Express ·
+                                    Railway</text>
+                                <rect class="box" x="45" y="132" width="250" height="44" rx="4" /><text x="170" y="151"
+                                    text-anchor="middle" font-size="14" font-weight="700">Base de datos</text><text
+                                    x="170" y="167" text-anchor="middle" font-size="11" opacity=".7">PostgreSQL ·
+                                    Railway</text>
+                                <line class="wire" x1="170" y1="44" x2="170" y2="60" />
+                                <polygon class="wire-head" points="170,66 165,58 175,58" /><text x="182" y="59"
+                                    font-size="11" opacity=".7">HTTPS · JWT</text>
+                                <line class="wire" x1="170" y1="110" x2="170" y2="126" />
+                                <polygon class="wire-head" points="170,132 165,124 175,124" /><text x="182" y="125"
+                                    font-size="11" opacity=".7">SQL</text>
+                            </svg></div>
+                        <div class="card-body">
+                            <p class="card-context">Proyecto personal</p>
+                            <h3>Biblioteca personal</h3>
+                            <p>Aplicación web full-stack para gestionar una biblioteca personal: catálogo de más de 300
+                                libros, usuarios, préstamos y devoluciones, con una API REST en Node.js y Express, base
+                                de datos PostgreSQL, autenticación con JWT y despliegue en Railway y GitHub Pages.</p>
+                            <p class="card-note">Migré la base de datos de SQL Server a PostgreSQL para poder
+                                desplegarla en la nube.</p>
+                            <ul class="chips">
+                                <li>Node.js</li>
+                                <li>Express</li>
+                                <li>PostgreSQL</li>
+                                <li>JWT</li>
+                                <li>Railway</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="card card-featured">
+                        <div class="card-media"><svg class="diagram" viewBox="0 0 340 242" role="img"
+                                aria-label="Diagrama: la aplicación MVC consume la API RESTful, que accede a SQL Server mediante una capa de acceso a datos">
+                                <rect class="box" x="45" y="0" width="250" height="44" rx="4" /><text x="170" y="19"
+                                    text-anchor="middle" font-size="14" font-weight="700">Aplicación MVC</text><text
+                                    x="170" y="35" text-anchor="middle" font-size="11" opacity=".7">ASP.NET Core ·
+                                    Bootstrap</text>
+                                <rect class="box" x="45" y="66" width="250" height="44" rx="4" /><text x="170" y="85"
+                                    text-anchor="middle" font-size="14" font-weight="700">API RESTful</text><text
+                                    x="170" y="101" text-anchor="middle" font-size="11" opacity=".7">Reglas de negocio ·
+                                    Swagger</text>
+                                <rect class="box" x="45" y="132" width="250" height="44" rx="4" /><text x="170" y="151"
+                                    text-anchor="middle" font-size="14" font-weight="700">Acceso a datos</text><text
+                                    x="170" y="167" text-anchor="middle" font-size="11" opacity=".7">Entity Framework
+                                    Core · Repository</text>
+                                <rect class="box" x="45" y="198" width="250" height="44" rx="4" /><text x="170" y="217"
+                                    text-anchor="middle" font-size="14" font-weight="700">Base de datos</text><text
+                                    x="170" y="233" text-anchor="middle" font-size="11" opacity=".7">SQL Server
+                                    2022</text>
+                                <line class="wire" x1="170" y1="44" x2="170" y2="60" />
+                                <polygon class="wire-head" points="170,66 165,58 175,58" /><text x="182" y="59"
+                                    font-size="11" opacity=".7">HTTP · JSON</text>
+                                <line class="wire" x1="170" y1="110" x2="170" y2="126" />
+                                <polygon class="wire-head" points="170,132 165,124 175,124" />
+                                <line class="wire" x1="170" y1="176" x2="170" y2="192" />
+                                <polygon class="wire-head" points="170,198 165,190 175,190" />
+                            </svg></div>
+                        <div class="card-body">
+                            <p class="card-context">Proyecto universitario · Fundamentos de Programación Web, UNED · II
+                                cuatrimestre 2026</p>
+                            <h3>Hospedaje Guanacaste</h3>
+                            <p>Sistema web de gestión hotelera en tres capas (ASP.NET Core MVC, Web API RESTful y acceso
+                                a datos con Entity Framework Core sobre SQL Server 2022), que administra clientes,
+                                empleados, habitaciones y reservaciones, con validación de traslape de fechas, cálculo
+                                de descuento e IVA, integridad referencial y un reporte semanal de reservaciones.</p>
+                            <p class="card-note">Se desarrolló en tres etapas: MVC, API RESTful y base de datos
+                                relacional en 2FN.</p>
+                            <ul class="chips">
+                                <li>C#</li>
+                                <li>ASP.NET Core</li>
+                                <li>Web API</li>
+                                <li>Entity Framework Core</li>
+                                <li>SQL Server</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="card card-featured">
+                        <div class="card-media"><svg class="diagram" viewBox="0 0 340 176" role="img"
+                                aria-label="Diagrama: clientes Windows Forms se comunican por TCP con un servidor que usa SQL Server">
+                                <rect class="box" x="45" y="0" width="250" height="44" rx="4" /><text x="170" y="19"
+                                    text-anchor="middle" font-size="14" font-weight="700">Clientes</text><text x="170"
+                                    y="35" text-anchor="middle" font-size="11" opacity=".7">Windows Forms</text>
+                                <rect class="box" x="45" y="66" width="250" height="44" rx="4" /><text x="170" y="85"
+                                    text-anchor="middle" font-size="14" font-weight="700">Servidor</text><text x="170"
+                                    y="101" text-anchor="middle" font-size="11" opacity=".7">Capas de negocio ·
+                                    multihilo</text>
+                                <rect class="box" x="45" y="132" width="250" height="44" rx="4" /><text x="170" y="151"
+                                    text-anchor="middle" font-size="14" font-weight="700">Base de datos</text><text
+                                    x="170" y="167" text-anchor="middle" font-size="11" opacity=".7">SQL Server
+                                    Express</text>
+                                <line class="wire" x1="170" y1="50" x2="170" y2="60" />
+                                <polygon class="wire-head" points="170,66 165,58 175,58" />
+                                <polygon class="wire-head" points="170,44 165,52 175,52" /><text x="182" y="59"
+                                    font-size="11" opacity=".7">TCP · JSON</text>
+                                <line class="wire" x1="170" y1="110" x2="170" y2="126" />
+                                <polygon class="wire-head" points="170,132 165,124 175,124" /><text x="182" y="125"
+                                    font-size="11" opacity=".7">ADO.NET</text>
+                            </svg></div>
+                        <div class="card-body">
+                            <p class="card-context">Proyecto universitario · Programación Avanzada con C#, UNED · II
+                                cuatrimestre 2026</p>
+                            <h3>Boletería UNED</h3>
+                            <p>Sistema de boletería para partidos de fútbol, hecho en C# con arquitectura en capas y
+                                programación orientada a objetos, con una primera versión de escritorio en Windows Forms
+                                y una segunda que agrega SQL Server, un servidor TCP con clientes concurrentes y control
+                                de ventas con multihilo.</p>
+                            <p class="card-note">Es el único de mis proyectos con sockets TCP y multihilo.</p>
+                            <ul class="chips">
+                                <li>C#</li>
+                                <li>Windows Forms</li>
+                                <li>SQL Server</li>
+                                <li>TCP</li>
+                                <li>Multihilo</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+
+                <h3 class="subsection-title">Programa Oracle Next Education (ONE)</h3>
+                <p class="subsection-lead">Proyectos web que hice durante la formación con Alura, entre 2022 y 2023.</p>
+                <ul class="project-list">
+                    <li class="project-row">
+                        <img src="img/proyecto-encriptador.png" width="96" height="72" loading="lazy"
+                            alt="Captura de encriptador de texto">
+                        <div>
+                            <h4>Encriptador de texto</h4>
+                            <p>Herramienta que cifra mensajes de texto y los descifra, hecha con Alura durante ONE.</p>
+                            <ul class="chips">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                        </div>
+                        <a class="card-link" href="https://joshisan.github.io/ProyectoEncriptadorAlura.github.oi/"
+                            target="_blank" rel="noopener">Ver proyecto<span class="sr-only"> Encriptador de texto (se
+                                abre en una pestaña nueva)</span></a>
+                    </li>
+                    <li class="project-row">
+                        <img src="img/proyecto-lista-tareas.jpg" width="96" height="72" loading="lazy"
+                            alt="Captura de lista de tareas">
+                        <div>
+                            <h4>Lista de tareas</h4>
+                            <p>Planificador de tareas pendientes: agregar, marcar como completadas, actualizar y
+                                eliminar.</p>
+                            <ul class="chips">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                        </div>
+                        <a class="card-link" href="https://joshisan.github.io/ProyectoListaTareas-TO-DO.github.oi/"
+                            target="_blank" rel="noopener">Ver proyecto<span class="sr-only"> Lista de tareas (se abre
+                                en una pestaña nueva)</span></a>
+                    </li>
+                    <li class="project-row">
+                        <img src="img/proyecto-petshop.jpg" width="96" height="72" loading="lazy"
+                            alt="Captura de formulario petshop">
+                        <div>
+                            <h4>Formulario PetShop</h4>
+                            <p>Formulario de contacto de una tienda de mascotas, con validación en cada campo.</p>
+                            <ul class="chips">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                        </div>
+                        <a class="card-link" href="https://joshisan.github.io/ProyectoFormularioPetShop.github.oi/"
+                            target="_blank" rel="noopener">Ver proyecto<span class="sr-only"> Formulario PetShop (se
+                                abre en una pestaña nueva)</span></a>
+                    </li>
+                    <li class="project-row">
+                        <img src="img/proyecto-barberia.jpg" width="96" height="72" loading="lazy"
+                            alt="Captura de sitio de una barbería">
+                        <div>
+                            <h4>Sitio de una barbería</h4>
+                            <p>Página de una barbería con información del negocio, ubicación, diferenciales y un video.
+                            </p>
+                            <ul class="chips">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                            </ul>
+                        </div>
+                        <a class="card-link" href="https://joshisan.github.io/ProyectoBarberiaAlura.github.oi/"
+                            target="_blank" rel="noopener">Ver proyecto<span class="sr-only"> Sitio de una barbería (se
+                                abre en una pestaña nueva)</span></a>
+                    </li>
+                    <li class="project-row">
+                        <img src="img/proyecto-tienda-cursos.jpg" width="96" height="72" loading="lazy"
+                            alt="Captura de tienda de cursos">
+                        <div>
+                            <h4>Tienda de cursos</h4>
+                            <p>Mini tienda de cursos de programación, con video, mapa de cursos y empresas aliadas.</p>
+                            <ul class="chips">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                            </ul>
+                        </div>
+                        <a class="card-link" href="https://joshisan.github.io/ProyectoMiniTiendaAlura.github.oi/"
+                            target="_blank" rel="noopener">Ver proyecto<span class="sr-only"> Tienda de cursos (se abre
+                                en una pestaña nueva)</span></a>
+                    </li>
+                    <li class="project-row">
+                        <img src="img/proyecto-tienda-videojuegos.jpg" width="96" height="72" loading="lazy"
+                            alt="Captura de tienda de videojuegos">
+                        <div>
+                            <h4>Tienda de videojuegos</h4>
+                            <p>Tienda con juegos y aplicaciones populares, destacados y novedades con fecha de
+                                lanzamiento.</p>
+                            <ul class="chips">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                            </ul>
+                        </div>
+                        <a class="card-link" href="https://joshisan.github.io/ProyectoTiendaVideojuegosAlura.github.oi/"
+                            target="_blank" rel="noopener">Ver proyecto<span class="sr-only"> Tienda de videojuegos (se
+                                abre en una pestaña nueva)</span></a>
+                    </li>
+                    <li class="project-row">
+                        <img src="img/proyecto-apeperia.jpg" width="96" height="72" loading="lazy"
+                            alt="Captura de apeperia">
+                        <div>
+                            <h4>Apeperia</h4>
+                            <p>Sitio de una empresa de aplicaciones a la medida, con planes de mantenimiento y un video
+                                explicativo.</p>
+                            <ul class="chips">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                            </ul>
+                        </div>
+                        <a class="card-link" href="https://joshisan.github.io/ProyectoApeperia.github.oi/"
+                            target="_blank" rel="noopener">Ver proyecto<span class="sr-only"> Apeperia (se abre en una
+                                pestaña nueva)</span></a>
+                    </li>
                 </ul>
             </div>
-            <section class="perfil_container" id="enlace_perfil">
-                <div class="perfil_container__imagen___texto">
-                    <div class="perfil__imagen">
-                        <img src="img/Foto 2.jpeg" alt="Foto Perfil Desarrollador">
-                    </div>
-                    <div class="perfil__parrafo">
-                        <div class="perfil_container__titulo">
-                            <h2>PERFIL</h2>
-                            <section class="barra_divisora_general"></section>
-                        </div>
-                        <p>Inicié mi trayectoria profesional en este sector en el año 2020, momento en el cual tomé la decisión de matricular la carrera de Ingeniería Informática en la Universidad Estatal a Distancia de Costa Rica (UNED), tras investigar entre las distintas ramas disponibles formé una atracción por el desarrollo de páginas y aplicaciones web.</p></br></br>
+        </section>
 
-                        <p>Gracias a la alianza entre la empresa de tecnología ORACLE y el grupo educativo ALURA Latam, se me brindó la oportunidad de adquirir una beca para iniciar mi formación específica en este apasionante mundo del desarrollo Full Stack a través del Programa Oracle Next Education (ONE).</p></br></br>
+        <!-- ===== Formación ===== -->
+        <section class="section" id="formacion">
+            <div class="wrap">
+                <h2 class="section-title">Formación</h2>
 
-                        <p>Oracle financia el programa y la plataforma Alura Latam, imparte a través de instructores con amplia experiencia y conocimiento, las formaciones necesarias para la capacitación de desarrolladores que ayuden a suplir la creciente necesidad de profesionales en el sector.</p></br></br>
-                        
-                        <div class="logos_skills">
-                            <h3>SKILLS</h3>
-                            <section class="barra_divisora_general"></section>
+                <div class="formacion-group">
+                    <h3>Universitaria</h3>
+                    <ol class="timeline">
+                        <!-- Actualizar cada cuatrimestre: créditos (118 de 129) y el texto de "Cursando". -->
+                        <li class="is-current">
+                            <span class="period">Desde 2021</span>
                             <div>
-                                <ul>
-                                    <li><img src="./img/html.png" class="logos_Skills__img" alt="Logo HTML"></li>
-                                    <li><img src="./img/css.png" class="logos_Skills__img" alt="Logo CSS"></li>
-                                    <li><img src="./img/js.png" class="logos_Skills__img" alt="Logo JS"></li>
-                                </ul>                                
+                                <h4>Bachillerato en Ingeniería Informática</h4>
+                                <p class="where">Universidad Estatal a Distancia (UNED) · San José, Costa Rica</p>
+
+                                <div class="progress" style="--p: 91.47%">
+                                    <div class="progress-text">
+                                        <span><strong>118 de 129</strong> créditos aprobados</span>
+                                        <span>91 %</span>
+                                    </div>
+                                    <div class="progress-bar" role="img"
+                                        aria-label="118 de 129 créditos aprobados, 91 por ciento de avance">
+                                        <div class="progress-fill"></div>
+                                    </div>
+                                </div>
+
+                                <p class="detail">
+                                    Cursando Compiladores y Telemática y Redes II, seguido de la práctica profesional,
+                                    prevista para 2027.
+                                </p>
+                                <ul class="chips">
+                                    <li>Programación en C#</li>
+                                    <li>ASP.NET MVC</li>
+                                    <li>Desarrollo web</li>
+                                    <li>Investigación de operaciones</li>
+                                    <li>Métodos cuantitativos</li>
+                                    <li>Compiladores</li>
+                                    <li>Redes</li>
+                                </ul>
                             </div>
-                        </div>
-                    </div>
+                        </li>
+                    </ol>
                 </div>
-            </section>
-            <section class="barra_divisora_general"></section>
-            <section class="proyectos_container" id="enlace_proyectos">
-                <div class="proyectos_container__titulo">
-                    <h2>PROYECTOS</h2>
-                    <section class="barra_divisora_general"></section>
+
+                <div class="formacion-group">
+                    <h3>Complementaria</h3>
+                    <ol class="timeline">
+                        <li>
+                            <span class="period">2022 – 2023</span>
+                            <div>
+                                <h4>Programa Oracle Next Education (ONE)</h4>
+                                <p class="where">Alura Latam · São Paulo, Brasil</p>
+                                <p class="detail">Tres formaciones (Principiante en Programación, Front End y Java
+                                    Orientado a Objetos) con una
+                                    carga estimada de 294 horas, concluido el 3 de febrero de 2023: <a class="card-link"
+                                        href="https://app.aluracursos.com/program/certificate/bf1c0133-1b63-4992-b49e-3519cb4bf021"
+                                        target="_blank" rel="noopener">ver certificado<span class="sr-only"> (se abre en
+                                            una pestaña
+                                            nueva)</span></a></p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="period">2021 – 2022</span>
+                            <div>
+                                <h4>Skills4Life: Inglés para la Empleabilidad</h4>
+                                <p class="where">MTSS · Cinde · Fundación Aliarse · San José, Costa Rica</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="period">2021 – 2022</span>
+                            <div>
+                                <h4>Skills4Life: Habilidades Socioemocionales para el Trabajo</h4>
+                                <p class="where">MTSS · Cinde · Fundación Aliarse · San José, Costa Rica</p>
+                            </div>
+                        </li>
+                    </ol>
+
+                    <details class="certs">
+                        <summary><span>Todos los certificados <span class="certs-count">(54)</span></span></summary>
+                        <div class="certs-body">
+                            <h4>Programa ONE y formaciones</h4>
+                            <p class="certs-source">Alura Latam</p>
+                            <ul>
+                                <li><span>Programa Oracle Next Education F2 T3</span><span class="cert-meta">feb.
+                                        2023</span></li>
+                                <li><span>Formación Principiante en Programación G3 - ONE</span><span
+                                        class="cert-meta">ago. 2022</span></li>
+                                <li><span>Formación Front End G3 - ONE</span><span class="cert-meta">ene. 2023</span>
+                                </li>
+                                <li><span>Formación Java Orientado a Objetos G3 - ONE</span><span class="cert-meta">feb.
+                                        2023</span></li>
+                                <li><span>Formación Emprendimiento G3 - ONE</span><span class="cert-meta">ene.
+                                        2023</span></li>
+                                <li><span>Formación Business Agility G3 - ONE</span><span class="cert-meta">oct.
+                                        2022</span></li>
+                                <li><span>Formación Desarrollo Personal G3 - ONE</span><span class="cert-meta">ago.
+                                        2022</span></li>
+                            </ul>
+                            <h4>Java y bases de datos</h4>
+                            <p class="certs-source">Alura Latam</p>
+                            <ul>
+                                <li><span>Java JRE y JDK: compile y ejecute su primer programa</span><span
+                                        class="cert-meta">ene. 2023</span></li>
+                                <li><span>Java OO: Entendiendo la Orientación a Objetos</span><span
+                                        class="cert-meta">ene. 2023</span></li>
+                                <li><span>Java y java.lang: Programe con la clase Object y String</span><span
+                                        class="cert-meta">ene. 2023</span></li>
+                                <li><span>Java Excepciones: Aprenda a crear, lanzar y controlar excepciones</span><span
+                                        class="cert-meta">ene. 2023</span></li>
+                                <li><span>Java Polimorfismo: Entendiendo herencia e interfaces</span><span
+                                        class="cert-meta">ene. 2023</span></li>
+                                <li><span>Java y java.util: Colecciones, Wrappers y Lambda expressions</span><span
+                                        class="cert-meta">ene. 2023</span></li>
+                                <li><span>Java: Dominando las Collections</span><span class="cert-meta">feb. 2023</span>
+                                </li>
+                                <li><span>Introducción a SQL con MySQL: Manipule y consulte datos</span><span
+                                        class="cert-meta">ene. 2023</span></li>
+                            </ul>
+                            <h4>Front End</h4>
+                            <p class="certs-source">Alura Latam</p>
+                            <ul>
+                                <li><span>HTML5 y CSS3 parte 1: Mi primera página web</span><span class="cert-meta">ago.
+                                        2022</span></li>
+                                <li><span>HTML5 y CSS3 parte 2: Posicionamiento, listas y navegación</span><span
+                                        class="cert-meta">ago. 2022</span></li>
+                                <li><span>HTML5 y CSS3 parte 3: Trabajando con formularios y tablas</span><span
+                                        class="cert-meta">ago. 2022</span></li>
+                                <li><span>HTML5 y CSS3 parte 4: Avanzando en CSS</span><span class="cert-meta">ago.
+                                        2022</span></li>
+                                <li><span>Flexbox: Posicione elementos en la pantalla</span><span class="cert-meta">oct.
+                                        2022</span></li>
+                                <li><span>CSS Grid: Simplificando layouts</span><span class="cert-meta">oct. 2022</span>
+                                </li>
+                                <li><span>Layouts Responsivos: Trabajando con layouts mobile</span><span
+                                        class="cert-meta">oct. 2022</span></li>
+                                <li><span>Arquitectura CSS: Descomplicando los problemas</span><span
+                                        class="cert-meta">nov. 2022</span></li>
+                                <li><span>JavaScript: primeros pasos con el lenguaje</span><span class="cert-meta">nov.
+                                        2022</span></li>
+                                <li><span>JS en la Web: Manipulación del DOM con JavaScript</span><span
+                                        class="cert-meta">nov. 2022</span></li>
+                                <li><span>JS en la Web: Validación de Formularios y HTML5</span><span
+                                        class="cert-meta">nov. 2022</span></li>
+                                <li><span>JS en la Web: Almacenando datos en el navegador</span><span
+                                        class="cert-meta">dic. 2022</span></li>
+                                <li><span>JavaScript: Introducción a la Orientación a Objetos</span><span
+                                        class="cert-meta">nov. 2022</span></li>
+                                <li><span>JavaScript: Herencia e Interfaces en Orientación a Objetos</span><span
+                                        class="cert-meta">dic. 2022</span></li>
+                            </ul>
+                            <h4>Lógica de programación y control de versiones</h4>
+                            <p class="certs-source">Alura Latam</p>
+                            <ul>
+                                <li><span>Lógica de programación parte 1: Primeros pasos</span><span
+                                        class="cert-meta">ago. 2022</span></li>
+                                <li><span>Lógica de programación parte 2: Conceptos primordiales</span><span
+                                        class="cert-meta">ago. 2022</span></li>
+                                <li><span>Lógica de programación parte 3: Practicando con juegos y
+                                        animaciones</span><span class="cert-meta">ago. 2022</span></li>
+                                <li><span>Git y GitHub: controle y comparta su código</span><span class="cert-meta">ago.
+                                        2022</span></li>
+                            </ul>
+                            <h4>Agilidad, emprendimiento y desarrollo personal</h4>
+                            <p class="certs-source">Alura Latam</p>
+                            <ul>
+                                <li><span>Fundamentos de Agilidad: Primeros pasos para la transformación
+                                        ágil</span><span class="cert-meta">oct. 2022</span></li>
+                                <li><span>La Empresa Ágil: Introduciendo el Business Agility en las
+                                        organizaciones</span><span class="cert-meta">oct. 2022</span></li>
+                                <li><span>Organización de equipos ágiles: Las funciones existentes en un
+                                        equipo</span><span class="cert-meta">oct. 2022</span></li>
+                                <li><span>Gestión ágil: Liderando el cambio en un ambiente de agilidad</span><span
+                                        class="cert-meta">oct. 2022</span></li>
+                                <li><span>Emprendimiento: De la idea al plan de negocios</span><span
+                                        class="cert-meta">dic. 2022</span></li>
+                                <li><span>Lean Startup: Método eficaz para convertir una idea de negocio en
+                                        empresa</span><span class="cert-meta">dic. 2022</span></li>
+                                <li><span>Business Model Canvas parte I: Un modelo poderoso para tu negocio</span><span
+                                        class="cert-meta">ene. 2023</span></li>
+                                <li><span>Business Model Canvas parte II: Avanzando con tu modelo de
+                                        negocios</span><span class="cert-meta">ene. 2023</span></li>
+                                <li><span>Pitch para entrevistas: Haga presentaciones impactantes</span><span
+                                        class="cert-meta">ene. 2023</span></li>
+                                <li><span>Productividad parte 1: Estrategias para actividades diarias</span><span
+                                        class="cert-meta">ago. 2022</span></li>
+                                <li><span>Hábitos: Ser productivo para cumplir sus metas personales</span><span
+                                        class="cert-meta">ago. 2022</span></li>
+                                <li><span>Foco: Enfocarse trae más resultados para el día a día</span><span
+                                        class="cert-meta">ago. 2022</span></li>
+                                <li><span>LinkedIn: Como hacer que tu perfil trabaje por ti</span><span
+                                        class="cert-meta">jul. 2022</span></li>
+                            </ul>
+                            <h4>Excel</h4>
+                            <p class="certs-source">Macquarie University, ofrecido por Coursera</p>
+                            <ul>
+                                <li><span>Excel Skills for Business: Essentials</span><span class="cert-meta">ene.
+                                        2022</span></li>
+                                <li><span>Excel Skills for Business: Intermediate I</span><span class="cert-meta">ene.
+                                        2022</span></li>
+                                <li><span>Excel Skills for Business: Intermediate II</span><span class="cert-meta">feb.
+                                        2022</span></li>
+                                <li><span>Excel Skills for Business: Advanced</span><span class="cert-meta">feb.
+                                        2022</span></li>
+                            </ul>
+                            <h4>Otros</h4>
+                            <p class="certs-source">Distintas instituciones</p>
+                            <ul>
+                                <li><span>Get Connected · UNED y Cisco Networking Academy</span><span
+                                        class="cert-meta">feb. 2021</span></li>
+                                <li><span>Webinar de Java · Educación IT</span><span class="cert-meta">nov. 2020</span>
+                                </li>
+                                <li><span>Frente Único Postventa Perfil Taller · Universidad Q, Corporación Grupo
+                                        Q</span><span class="cert-meta">mar. 2018</span></li>
+                                <li><span>Hyundai Service Advisor Program, Certified Advisor · Hyundai Motor
+                                        Company</span><span class="cert-meta">jul. 2017</span></li>
+                            </ul>
+                        </div>
+                    </details>
                 </div>
-                <div class="proyectos_container__espacio___cards">
-                    <div class="proyectos_container__cards">
-                        <div class="proyectos_container__cards___subtitulo">
-                            <h2>Portafolio de Proyectos</h2>
-                        </div>
-                        <div class="proyectos_container__cards___imagen">
-                            <img src="img/proyecto_portafolio.png" alt="Imagen del Proyecto">
-                        </div>
-                        <section class="barra_divisora_general"></section>
-                        <div class="proyectos_container__cards___parrafo">
-                            <p>Sitio web en donde se muestra el perfil del desarrollador Jossué Sanabria, los proyectos desarrollados por él, así como su formación académica, resultado de su formación en ONE - Oracle Next Education y formaciones complementarias.</p>
-                        </div>
-                        <div class="proyectos_container__cards___boton">
-                            <a href="https://joshisan.github.io/ProyectoPortafolioProyectosJossueSanabriaSolano.github.oi/" target="_blank" onclick="window.open(this.href, this.target);return false;">Ir al Proyecto</a>
-                        </div>
-                    </div>
-                    <div class="proyectos_container__cards">
-                        <div class="proyectos_container__cards___subtitulo">
-                            <h2>Proyecto Barbería</h2>
-                        </div>
-                        <div class="proyectos_container__cards___imagen">
-                            <img src="img/ProyectoBarberiaAlura.jpg" alt="Imagen del Proyecto">
-                        </div>
-                        <section class="barra_divisora_general"></section>
-                        <div class="proyectos_container__cards___parrafo">
-                            <p>Un sitio web desarrollado en el programa ONE, en la cual creamos la página web de una barbería, mostrando información sobre la barbería, la ubicación de esta, aspectos o características diferenciales y un vídeo relacionado.</p>
-                        </div>
-                        <div class="proyectos_container__cards___boton">
-                            <a href="https://joshisan.github.io/ProyectoBarberiaAlura.github.oi/" target="_blank" onclick="window.open(this.href, this.target); return false;">Ir al Proyecto</a>
-                        </div>
-                    </div>
-                    <div class="proyectos_container__cards">
-                        <div class="proyectos_container__cards___subtitulo">
-                            <h2>Encriptador de Texto</h2>
-                        </div>
-                        <div class="proyectos_container__cards___imagen">
-                            <img src="img/proyecto_encriptador.png" alt="Imagen del Proyecto">
-                        </div>
-                        <section class="barra_divisora_general"></section>
-                        <div class="proyectos_container__cards___parrafo">
-                            <p>Un sitio web en donde desarrollado en conjunto con la plataforma de aprendizaje Alura, en conjunto con el programa ONE, una herramienta de encriptado de mensajes de texto, así como su correspondiente herramienta de desencriptado.</p>
-                        </div>
-                        <div class="proyectos_container__cards___boton">
-                            <a href="https://joshisan.github.io/ProyectoEncriptadorAlura.github.oi/" target="_blank" onclick="window.open(this.href, this.target); return false;">Ir al Proyecto</a>
-                        </div>
-                    </div>
-                    <div class="proyectos_container__cards">
-                        <div class="proyectos_container__cards___subtitulo">
-                            <h2>Tienda de Cursos</h2>
-                        </div>
-                        <div class="proyectos_container__cards___imagen">
-                            <img src="img/ProyectoMiniTiendaAlura.jpg" alt="Imagen del Proyecto">
-                        </div>
-                        <section class="barra_divisora_general"></section>
-                        <div class="proyectos_container__cards___parrafo">
-                            <p>Mini tienda de la plataforma de aprendizaje Alura, donde se ofrecen cursos de lenguajes de programación, un vídeo introductorio con las ventajas de estudiar en ella, un mapa de cursos con una ruta formativa y los aliados que respaldan.</p>
-                        </div>
-                        <div class="proyectos_container__cards___boton">
-                            <a href="https://joshisan.github.io/ProyectoMiniTiendaAlura.github.oi/" target="_blank" onclick="window.open(this.href, this.target); return false;">Ir al Proyecto</a>
-                        </div>
-                    </div>
-                    <div class="proyectos_container__cards">
-                        <div class="proyectos_container__cards___subtitulo">
-                            <h2>Tienda de Videojuegos</h2>
-                        </div>
-                        <div class="proyectos_container__cards___imagen">
-                            <img src="img/ProyectoTiendaVideojuegosAlura.jpg" alt="Imagen del Proyecto">
-                        </div>
-                        <section class="barra_divisora_general"></section>
-                        <div class="proyectos_container__cards___parrafo">
-                            <p>Una tienda de videojuegos, en donde se pueden encontrar algunos de los más reconocidos videojuegos, los juegos y aplicaciones más populares con una breve descripción, algunos destacados y algunas novedades y su fecha de lanzamiento. </p>
-                        </div>
-                        <div class="proyectos_container__cards___boton">
-                            <a href="https://joshisan.github.io/ProyectoTiendaVideojuegosAlura.github.oi/" target="_blank" onclick="window.open(this.href, this.target); return false;">Ir al Proyecto</a>
-                        </div>
-                    </div>
-                    <div class="proyectos_container__cards">
-                        <div class="proyectos_container__cards___subtitulo">
-                            <h2>Proyecto Apeperia</h2>
-                        </div>
-                        <div class="proyectos_container__cards___imagen">
-                            <img src="img/ProyectoApeperia.jpg" alt="Imagen del Proyecto">
-                        </div>
-                        <section class="barra_divisora_general"></section>
-                        <div class="proyectos_container__cards___parrafo">
-                            <p>Un empresa de diseño de aplicaciones personalizadas en diversas plataformas de desarrollo, con planes de mantenimiento, sus diferenciales (distinción de su trabajo) sus medios de contacto y un vídeo explicativo de su forma de trabajo.</p>
-                        </div>
-                        <div class="proyectos_container__cards___boton">
-                            <a href="https://joshisan.github.io/ProyectoApeperia.github.oi/" target="_blank" onclick="window.open(this.href, this.target); return false;">Ir al Proyecto</a>
-                        </div>
-                    </div>
-                    <div class="proyectos_container__cards">
-                        <div class="proyectos_container__cards___subtitulo">
-                            <h2>Lista de Tareas TO-DO</h2>
-                        </div>
-                        <div class="proyectos_container__cards___imagen">
-                            <img src="img/ProyectoListaTareas-TO-DO.jpg" alt="Imagen del Proyecto">
-                        </div>
-                        <section class="barra_divisora_general"></section>
-                        <div class="proyectos_container__cards___parrafo">
-                            <p>Una práctica herramienta de planificación de tareas pendientes (varias) de realizar, un TO DO, la cual permite marcar como completadas las tareas realizadas, eliminar las tareas que ya no se deben realizar y su respectiva actualización.</p>
-                        </div>
-                        <div class="proyectos_container__cards___boton">
-                            <a href="https://joshisan.github.io/ProyectoListaTareas-TO-DO.github.oi/" target="_blank" onclick="window.open(this.href, this.target); return false;">Ir al Proyecto</a>
-                        </div>
-                    </div>
-                    <div class="proyectos_container__cards">
-                        <div class="proyectos_container__cards___subtitulo">
-                            <h2>Formulario PetShop</h2>
-                        </div>
-                        <div class="proyectos_container__cards___imagen">
-                            <img src="img/ProyectoFomularioPetShop.jpg" alt="Imagen del Proyecto">
-                        </div>
-                        <section class="barra_divisora_general"></section>
-                        <div class="proyectos_container__cards___parrafo">
-                            <p>Herramienta con la funcionalidad de formulario de contacto entre el usuario y la PetShop, cada campo del formulario cuenta con una validación de la información ingresada, con el propósito de que la información esté lo más completa posible.</p>
-                        </div>
-                        <div class="proyectos_container__cards___boton">
-                            <a href="https://joshisan.github.io/ProyectoFormularioPetShop.github.oi/" target="_blank" onclick="window.open(this.href, this.target); return false;">Ir al Proyecto</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="barra_divisora_general"></section>
-            <section class="formacion_container" id="enlace_formacion">
-                <div class="formacion_container__titulo">
-                    <h2>FORMACIÓN</h2>
-                    <section class="barra_divisora_general"></section>
-                </div>
-                <div class="formacion_container_estudios">
-                    <ul class="imagen_formacion">
-                        <li><img src="img/engranajes_1.png" alt="Engranajes"></li>
-                    </ul>
-                    <ul class="formato_texto">
-                        <li class="formato_texto__titulacion"><p>Desarrollador Front-End (Html5 | CSS3 | Javascript) y Back-End (Java | MySQL)</p></li>
-                        <li class="formato_texto__institucion"><p>ONE - Oracle Next Education Program - Alura</p></li>
-                        <li class="formato_texto__ubicacion"><p>São Paulo, Brasil</p></li>
-                        <li class="formato_texto__periodo___estudio"><p>2022 - Proceso</p></li>
-                    </ul>
-                    <ul class="imagen_formacion">
-                        <li><img src="img/engranajes_2.png" alt="Engranajes"></li>
-                    </ul>
-                    <ul class="formato_texto">
-                        <li class="formato_texto__titulacion"><p>Bachillerato en Ingeniería Informática</p></li>
-                        <li class="formato_texto__institucion"><p>Universidad Estatal a Distancia (UNED)</p></li>
-                        <li class="formato_texto__ubicacion"><p>San José, Costa Rica</p></li>
-                        <li class="formato_texto__periodo___estudio"><p>2021 - Proceso</p></li>
-                    </ul>
-                    <ul class="imagen_formacion">
-                        <li><img src="img/engranajes_1.png" alt="Engranajes"></li>
-                    </ul>
-                    <ul class="formato_texto">
-                        <li class="formato_texto__titulacion"><p>Programa Skills4Life: Inglés para la Empleabilidad</p></li>
-                        <li class="formato_texto__institucion"><p>MTSS · Cinde · Fundación Aliarse</p></li>
-                        <li class="formato_texto__ubicacion"><p>San José, Costa Rica</p></li>
-                        <li class="formato_texto__periodo___estudio"><p>2021 - 2022</p></li>
-                    </ul>
-                    <ul class="imagen_formacion">
-                        <li><img src="img/engranajes_2.png" alt="Engranajes"></li>
-                    </ul>
-                    <ul class="formato_texto">
-                        <li class="formato_texto__titulacion"><p>Programa Skills4Life: Habilidades Socioemocionales para el Trabajo</p></li>
-                        <li class="formato_texto__institucion"><p>MTSS · Cinde · Fundación Aliarse</p></li>
-                        <li class="formato_texto__ubicacion"><p>San José, Costa Rica</p></li>
-                        <li class="formato_texto__periodo___estudio"><p>2021 - 2022</p></li>
-                    </ul>
-                </div>
-            </section>
-        </main>
-        <section class="barra_divisora_general"></section>
-        <footer>
-            <div class="contacto_titulo">
-                <h2>CONTACTO</h2>
-                <section class="barra_divisora_general"></section>
             </div>
-            <section class="footer_container" id="enlace_contacto">
-                <div class="footer_container__logos___redes">
-                    <ul>
-                        <li><a href="https://github.com/joshisan" class="footer_redes__sociales" target="_blank" onclick="window.open(this.href, this.target); return false;"><img src="img/Logo_Github.png" alt="Ícono de Github"></a></li>
-                        <li><a href="mailto:digitalnomadwebdeveloper@gmail.com" class="footer_redes__sociales" target="_blank" onclick="window.open(this.href, this.target); return false;"><img src="img/mail.png" alt="Ícono de Mail"></a></li>
-                        <li><a href="https://wa.me/+50685579715" class="footer_redes__sociales" target="_blank" onclick="window.open(this.href, this.target); return false;"><img src="img/whatsapp.png" alt="Ícono de Whatsapp"></a></li>
-                        <li><a href="https://www.linkedin.com/in/jossuesanabrias/" class="footer_redes__sociales" target="_blank" onclick="window.open(this.href, this.target); return false;"><img src="img/LinkedIn.png" alt="Ícono de LinkedIn"></a></li>
-                        <li><a href="https://www.facebook.com/Digital.Nomad.Web.Developers/" class="footer_redes__sociales" target="_blank" onclick="window.open(this.href, this.target); return false;"><img src="img/Facebook.png" alt="Ícono de Facebook"></a></li>
-                        <li><a href="https://www.instagram.com/digitalnomadwebdeveloper/" class="footer_redes__sociales" target="_blank" onclick="window.open(this.href, this.target); return false;"><img src="img/Instagram.png" alt="Ícono de Instagram"></a></li>
-                        <li><a href="https://twitter.com/NomadWebDevelop" class="footer_redes__sociales" target="_blank" onclick="window.open(this.href, this.target); return false;"><img src="img/Twitter.png" alt="Ícono de Twitter"></a></li>
+        </section>
+
+        <!-- ===== Contacto ===== -->
+        <section class="section" id="contacto">
+            <div class="wrap">
+                <h2 class="section-title">Contacto</h2>
+                <div class="contact-grid">
+                    <div>
+                        <p class="contact-lead">
+                            Si tienes una oportunidad, un proyecto o quieres conversar sobre desarrollo,
+                            escríbeme.
+                        </p>
+                        <a class="mail-link"
+                            href="mailto:jossuesanabriasolano@outlook.com">jossuesanabriasolano@outlook.com</a>
+                    </div>
+                    <ul class="contact-list">
+                        <li><a href="https://github.com/joshisan" target="_blank" rel="noopener"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use href="#i-github" />
+                                </svg>GitHub<span class="sub">joshisan</span></a></li>
+                        <li><a href="https://www.linkedin.com/in/jossuesanabrias/" target="_blank" rel="noopener"><svg
+                                    class="icon" aria-hidden="true">
+                                    <use href="#i-linkedin" />
+                                </svg>LinkedIn<span class="sub">jossuesanabrias</span></a></li>
+                        <li><a href="https://wa.me/50672353039" target="_blank" rel="noopener"><svg class="icon"
+                                    aria-hidden="true">
+                                    <use href="#i-whatsapp" />
+                                </svg>WhatsApp<span class="sub">Enviar mensaje</span></a></li>
                     </ul>
                 </div>
-                <div class="footer_container__menu___navegacion">
-                    <ul>
-                        <li class= "formato_texto_footer_menu__navegacion"><a href="#enlace_inicio">Inicio</a></li>
-                        <li class= "formato_texto_footer_menu__navegacion"><a href="#enlace_perfil">Perfil</a></li>
-                        <li class= "formato_texto_footer_menu__navegacion"><a href="#enlace_proyectos">Proyectos</a></li>
-                        <li class= "formato_texto_footer_menu__navegacion"><a href="#enlace_formacion">Formación</a></li>
-                    </ul>
-                </div>
-                <div class="footer_container_leyenda_copyrights">
-                    <p>&copy; Derechos Reservados · 2022</p>
-                    <p>Developed by Jossué Sanabria · Github · Joshisan</p>
-                    <p>San José · Costa Rica</p>
-                </div>
-            </section>
-        </footer>
-    </body>
-    <section class="barra_divisora_general"></section>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <p>&copy; <span id="anio">2026</span> Jossué Sanabria Solano · San José, Costa Rica</p>
+            <p><a href="#inicio">Volver arriba</a></p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
 </html>
